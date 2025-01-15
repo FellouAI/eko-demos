@@ -10,12 +10,13 @@ pnpm install @eko-ai/eko-cli -g
 eko-cli init browser-extension-demo
 
 cd browser-extension-demo
+#The code required to build a Chrome browser extension is generated in the dist directory
 # install dependencies
 pnpm install
 
-# run
+# Build dev
 pnpm run build:dev
 
-# build
+# build prod
 pnpm run build
 ```
