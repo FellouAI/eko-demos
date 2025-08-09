@@ -15,8 +15,8 @@
     "antd": "^5.22.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@eko-ai/eko": "^3.0.0-alpha.4",
-    "@eko-ai/eko-extension": "^3.0.0-alpha.4"
+    "@eko-ai/eko": "^3.0.0-alpha.5",
+    "@eko-ai/eko-extension": "^3.0.0-alpha.5"
   },
   "devDependencies": {
     "@types/chrome": "0.0.158",

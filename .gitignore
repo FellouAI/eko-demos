@@ -1,5 +1,6 @@
 tmp/
 .env
+dist/
 .idea/
 .vscode/
 node_modules/
