@@ -1,7 +1,7 @@
 {
-  "name": "eko agent",
+  "name": "Eko agent",
   "description": "Eko Agent Extension",
-  "version": "1.0",
+  "version": "3.0",
   "manifest_version": 3,
   "background": {
     "type": "module",
@@ -12,33 +12,36 @@
     "48": "icon.ico",
     "128": "icon.ico"
   },
-  "action": {
-    "default_popup": "popup.html"
+  "side_panel": {
+    "default_path": "sidebar.html",
+    "openPanelOnActionClick": true
   },
   "options_ui": {
-    "page": "options.html"
+    "page": "options.html",
+    "open_in_tab": false
   },
   "content_scripts": [
     {
+      "run_at": "document_idle",
       "matches": ["<all_urls>"],
-      "js": ["eko/extension_content_script.js", "js/content_script.js"],
-      "run_at": "document_idle"
+      "js": ["js/content_script.js"]
     }
   ],
   "permissions": [
-    "alarms",
     "tabs",
+    "activeTab",
     "windows",
+    "sidePanel",
     "storage",
     "scripting",
-    "activeTab",
+    "alarms",
     "notifications"
   ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
-  "web_accessible_resources": [{
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
       "matches": ["<all_urls>"],
-      "resources": ["eko/script/*"]
-  }]
+      "resources": []
+    }
+  ]
 }

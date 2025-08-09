@@ -1,24 +1,22 @@
 {
-  "name": "eko-browser-quickstart",
-  "version": "1.0.0",
+  "name": "browser-extension-quickstart",
+  "version": "3.0.0",
   "description": "eko browser extension",
-  "main": "index.js",
   "scripts": {
-    "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "webpack --config webpack/webpack.prod.js",
-    "build:dev": "webpack --config webpack/webpack.dev.js",
-    "build:dev_eko": "npm run link && npm run build:dev",
-    "link": "npm link @eko-ai/eko",
-    "clean": "rimraf dist",
-    "test": "npx jest",
-    "style": "prettier --write \"src/**/*.{ts,tsx}\""
+    "build": "webpack --config webpack.js"
   },
+  "author": "FellouAI",
   "license": "MIT",
+  "keywords": [
+    "fellou",
+    "eko"
+  ],
   "dependencies": {
     "antd": "^5.22.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@eko-ai/eko": "^1.0.9"
+    "@eko-ai/eko": "^3.0.0-alpha.4",
+    "@eko-ai/eko-extension": "^3.0.0-alpha.4"
   },
   "devDependencies": {
     "@types/chrome": "0.0.158",
