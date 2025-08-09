@@ -43,7 +43,7 @@ async function run() {
   ];
   const eko = new Eko({ llms, agents, callback });
   const result = await eko.run(
-    'Search for information about Musk, summarize and send it to the "Eko Awaken Your Web Innovation Challenge" Feishu group, and record the execution date in the desktop task.md file.'
+    "搜索马斯克信息，汇总并发送到 “Eko Awaken Your Web 创新挑战赛” 飞书群，并把执行日记录到桌面 task.md"
   );
   console.log("result: ", result.result);
 }
